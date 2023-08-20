@@ -1,0 +1,189 @@
+p6
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+  float radius, area;
+  printf("Enter the radius of a circle\n");
+  scanf("%f", &radius);
+  area = 3.14159*radius*radius;
+  printf("Area of the circle = %.2f\n", area);  // printing upto two decimal places
+  return 0;
+}
+
+p7
+  #include <stdio.h>
+#define a 200
+int main()
+{
+#ifdef a
+printf("hi\n");
+#else
+printf("bye\n");
+#endif
+return 0;
+}
+
+p10
+#include <stdio.h>
+int main() {
+	char id[10];
+	int hour;
+	double value, salary;
+	printf("Input the Employees ID(Max. 10 chars): ");
+	scanf("%s", &id);
+	printf("\nInput the working hrs: ");
+	scanf("%d", &hour);
+	printf("\nSalary amount/hr: ");
+	scanf("%lf", &value);
+	salary = value * hour;
+	printf("\nEmployees ID = %s\nSalary = U$ %.2lf\n", id,salary);
+	return 0;
+}
+
+
+p11
+  #include <stdio.h>
+int main()
+{
+int num=150;
+float val=107.2;
+char Mychar='D';
+long Lnum=-89;
+unsigned long Ulnum=935352;
+printf("%d\n",num);
+printf("%f\n",val);
+printf("%c\n",Mychar);
+printf("%l\n",Lnum);
+printf("%lu",Ulnum);
+return 0;
+}
+
+p12
+  #include <stdio.h>
+int main()
+{
+int n1;
+float n2;
+char n3;
+long n4;
+double n5;
+unsigned long n6;
+printf(" n1=%d\n n2=%d\n n3=%d\n n4=%d\n n5=%d\n n6=%d\n",sizeof(n1),sizeof(n2),sizeof(n3),sizeof(n4),sizeof(n5),sizeof(n6));
+return 0;
+}
+
+
+p13
+#include <stdio.h>
+int main()
+{
+int num=0;
+float val=0;
+char Mychar[50];
+long Lnum=0;
+unsigned long Ulnum=0;
+printf("Enter number:\n");
+scanf("%d", &num);
+printf("Enter value:\n");
+scanf("%f", &val);
+printf("Enter character:\n");
+scanf("%s", &Mychar);
+printf("Enter long number:\n");
+scanf("%l", &Lnum);
+printf("Enter unsigned long number:\n");
+scanf("%lu", &Ulnum);
+printf("num=%d\n val=%f\n char=%s\n Lnum=%l\n Ulnum=%lu\n", num,val,Mychar,Lnum,Ulnum);
+return 0;
+}
+
+
+p14
+#include<stdio.h>
+int main()
+{
+short int num=123457;
+printf("%d",num);
+return 0;
+}
+
+
+p15
+#include<stdio.h>
+int main()
+{
+    float num;
+    printf("Enter the number:\n");
+    scanf("%f",&num);
+    printf("num1=%0.1f\n",num);
+    printf("num2=%0.2f\n",num);
+    printf("num3=%0.3f\n",num);
+    printf("num4=%0.4f\n",num);
+    printf("num5=%0.5f",num);
+    return 0;
+}
+
+p16
+#include<stdio.h>
+int main()
+{
+char ch;
+printf("Enter the character:\n");
+scanf("%c",&ch);
+printf("Its ASCII value of %c is %d ",ch,ch);
+return 0;
+}
+
+p17
+#include <stdio.h>
+int main()
+{
+    int intValue = 12345;
+    float floatValue = 123.45678;
+    char stringValue[] = "Hello, World!";
+    // Length and Width
+    printf("Integer: %10d\n", intValue);
+    printf("Float: %10.2f\n", floatValue);
+    // Precision
+    printf("Float with precision: %.3f\n", floatValue);
+    // Left-align with width
+    printf("String left-aligned: %-20s\n", stringValue);
+    return 0;
+}
+
+
+p18
+#include <stdio.h>
+int main() {
+    unsigned int num;
+    printf("Enter a negative integer: ");
+    scanf("%d", &num);
+    // Print using various format specifiers
+    printf("As unsigned int: %u\n", num);
+    printf("As int: %d\n", num);
+    printf("As hexadecimal: %x\n", num);
+    printf("As octal: %o\n", num);
+    return 0;
+}
+
+
+p19
+#include<stdio.h>
+#include<stdlib.h>
+int main ()
+	{
+		int num;
+		printf("\n Input a positive or negative number :");
+		scanf("%d",&num);
+		printf (" The absolute value of the given number is : %d\n",abs(num));
+		return 0;
+	}
+
+  
+
+
+
+
+
+
+
