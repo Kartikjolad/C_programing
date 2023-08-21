@@ -1,0 +1,113 @@
+p20
+#include<stdio.h>
+int main()
+{
+enum days_of_weeks{SUN,MON=4,TUE,WED,THU,FRI,SAT};
+enum days_of_weeks day=MON;
+printf("%d",day);
+}
+
+
+p21
+#include<stdio.h>
+#include<stdbool.h>
+int main()
+{
+bool k1=true,k2=0,k3=false,k4=7;
+printf("%d\n",k1);
+printf("%d\n",k2);
+printf("%d\n",k3);
+printf("%d",k4);
+}
+
+p22
+#include<stdio.h>
+int main()
+{
+int num=18;
+printf("%d",num);
+return 0;
+}
+
+
+p23
+#include<stdio.h>
+int main()
+{
+unsigned char ch='K';
+printf("%d",ch);
+return 0;
+}
+
+p24
+#include<stdio.h>
+int main()
+{
+const int num=75;
+//num=100;
+printf("%d",num);
+return 0;
+}
+
+
+p25
+#include<stdio.h>
+int main()
+{
+//char int=-97;
+char mych=75;
+//printf("%c",int);
+printf("%c",mych);
+return 0;
+}
+
+
+p(e)
+#include<stdio.h>
+int main()
+{
+unsigned char ch=75;
+printf("%c",ch);
+return 0;
+}
+
+
+p(f)
+#include<stdio.h>
+int main()
+{
+double num1=15.2343,num2=23.8763,Res;
+Res=num1+num2;
+printf("Result=%.20f",Res);
+return 0;
+}
+
+
+p(g)
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+char low,up;
+printf("Enter the lower letter:");
+scanf("%c",&low);
+up=toupper(low);
+printf("%c",up);
+return 0;
+}
+
+
+p(h)
+#include <stdio.h>
+int main()
+{
+int n1;
+float n2;
+char n3;
+long n4;
+double n5;
+unsigned long n6;
+printf(" n1=%d\n n2=%d\n n3=%d\n n4=%d\n n5=%d\n n6=%d\n",sizeof(n1),sizeof(n2),sizeof(n3),sizeof(n4),sizeof(n5),sizeof(n6));
+return 0;
+}
+
