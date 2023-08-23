@@ -1,0 +1,387 @@
+p27
+#include<stdio.h>
+int main()
+{
+int num,inc1 ,dec1;
+printf("Enter the number:");
+scanf("%d",&num);
+inc1=++num;
+dec1=--num;
+printf("Incremente=%d\nDecrement=%d\n",inc1,dec1);
+}
+
+p28(a)
+#include<stdio.h>
+int main()
+{
+    int a=5,b=2,c=4,i;
+    for(i=0;i<b;i++)
+    {
+        ++a;
+    }
+    printf("%d\n",a);
+    for(i=0;i<c;i++)
+    {
+      --a;
+    }
+    printf("%d",a);
+
+}
+
+p28(b)
+#include<stdio.h>
+int main()
+{
+    int a=5,b=2,c=4,d,f;
+    a+=b;
+    a-=c;
+    printf("value of a=%d",a);
+
+    }
+
+
+p29
+#include<stdio.h>
+int main()
+{
+float a;
+int Res;
+printf("Enetr the number:");
+scanf("%f",&a);
+Res=(a+0.5)*10/10;
+printf("Number=%d",Res);
+
+}
+
+
+p30
+#include<stdio.h>
+int main()
+{
+int num1,num2,Temp;
+printf("Enter the two numbers:\n");
+scanf("%d\n",&num1);
+scanf("%d",&num2);
+Temp=num1;
+num1=num2;
+num2=Temp;
+printf("num1=%d\tnum2=%d",num1,num2);
+}
+
+
+p31
+#include<stdio.h>
+int main()
+{
+int a=10,b=20;
+a=a+b;
+b=a-b;
+a=a-b;
+printf("a=%d\t b=%d",a,b);
+}
+
+
+p32
+#include<stdio.h>
+int main()
+{
+char ch='A';
+ch++;
+printf("ch=%c",ch);
+}
+
+
+p33
+#include<stdio.h>
+int main()
+{
+int num;
+printf("Enter the number:");
+scanf("%d",&num);
+(num%2)==0? printf("%d is the even number",num):printf("%d is the odd number",num);
+}
+
+
+p34(a)
+#include<stdio.h>
+int main()
+{
+float fah,cel;
+printf("enter the temp values in fahrenheit:");
+scanf("%f",&fah);
+cel=(fah-32)*5/9;
+printf("temp in degree celsius=%0.2f",cel);
+}
+
+
+p34(b)
+#include<stdio.h>
+int main()
+{
+float fah,cel;
+printf("Enter the temp values in degree celsius:");
+scanf("%f",&cel);
+fah=(cel*9/5)+32;
+printf("Temp in fahrenheit=%0.2f",fah);
+}
+
+
+p35
+#include<stdio.h>
+int main()
+{
+int a,b,Add,Mul,Sub;
+float Div;
+printf("Enter the values:");
+scanf("%d\n%d",&a,&b);
+Add=a+b;
+Mul=a*b;
+Sub=a-b;
+Div=(float)a/(float)b;
+printf("addition=%d\nsubtraction=%d\nmultiplication=%d\ndivision=%f",Add,Sub,Mul,Div);
+}
+
+
+p36
+#include<stdio.h>
+int main()
+{
+int A=8,B=3,C,D,E,G;
+float F;
+printf("A=8\tB=3\n");
+C=A+B;
+D=A-B;
+E=A*B;
+F=(float)A/(float)B;
+G=A%B;
+printf("ADD=%d\nSUB=%d\nMUL=%d\nDIV=%f\nMOD=%d",C,D,E,F,G);
+}
+
+
+p37
+#include<stdio.h>
+int main()
+{
+int num=5;
+(num%3==0 || num%7==0)?printf("multiple of 3 or 7"):printf("Neither multiple by 3 nor by 7");
+return 0;
+}
+
+
+p38
+#include<stdio.h>
+int main()
+{
+int a=5,b=5,c=10,d;
+printf("%d\n",a==b);
+printf("%d\n",a<b);
+printf("%d\n",a>b);
+printf("%d\n",a<=b);
+printf("%d\n",a>=b);
+printf("%d\n",a!=b);
+printf("%d\n",b==c);
+printf("%d\n",b<c);
+printf("%d\n",b>c);
+printf("%d\n",b<=c);
+printf("%d\n",b>=c);
+printf("%d\n",b!=c);
+printf("%d\n",a==c);
+printf("%d\n",a<c);
+printf("%d\n",a>c);
+printf("%d\n",a<=c);
+printf("%d\n",a>=c);
+printf("%d\n",a!=c);
+
+}
+
+
+p40
+#include<stdio.h>
+int main()
+{
+int a=10,b=20;
+printf("%d",(a==30||b==30)||(a+b==30));
+}
+
+
+p41
+#include<stdio.h>
+int main()
+{
+int SI,P,T,R;
+printf("Enter principal amount,Time,Interest rate:\n");
+scanf("%d%d%d",&P,&T,&R);
+SI=(P*T*R)/100;
+printf("Simple Interest=%d",SI);
+return 0;
+}
+
+
+p42
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double principal, rate, time, compoundInterest,Amount;
+    printf("Enter the principal amount: ");
+    scanf("%lf", &principal);
+    printf("Enter the rate of interest (as a decimal): ");
+    scanf("%lf", &rate);
+    printf("Enter the time (in years): ");
+    scanf("%lf", &time);
+    Amount= principal * (pow(1 + rate,time));
+   compoundInterest=Amount - principal;
+    printf("Compound Interest: %.2lf\n", compoundInterest);
+
+    return 0;
+}
+
+
+p43
+#include<stdio.h>
+int main()
+{
+int a=5,b=5,c=10;
+printf("%d\n",a>c&&b>c);
+printf("%d",a<c&&b<c);
+}
+
+
+p44
+#include<stdio.h>
+int main()
+{
+int a=2,b=3;
+printf("Bitwise OR=%d\n",a|b);
+printf("Bitwise AND=%d\n",a&b);
+printf("Bitwise XNOR=%d\n",a^b);
+printf("left shift by 2=%d\n",a<<2);
+printf("left shift by 2=%d\n",b<<2);
+printf("Right shift by 1=%d\n",a>>2);
+printf("Right shift by 1=%d",b>>2);
+}
+
+
+p45
+#include<stdio.h>
+int main()
+{
+int num=10;
+float val=23.45,Res;
+Res=(float)num+val;
+printf("size of Res=%0.2f is %d",Res,sizeof(Res));
+}
+
+
+p46
+#include<stdio.h>
+int main()
+{
+char ch,s;
+printf("Enter the integer:");
+scanf("%d",&ch);
+printf("ASCII character is %c",ch);
+}
+
+
+p47
+ #include <stdio.h>
+
+int main() {
+    float x1, y1, x2, y2, slope;
+    printf("Enter the coordinates of point 1 (x1 y1): ");
+    scanf("%f %f", &x1, &y1);
+    printf("Enter the coordinates of point 2 (x2 y2): ");
+    scanf("%f %f", &x2, &y2);
+    slope = (y2 - y1) / (x2 - x1);
+    printf("The slope of the line joining the two points is: %.2f\n", slope);
+    return 0;
+}
+
+
+p48
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float sideLength, circleRadius, circleArea;
+    printf("Enter the side length of the square (a): ");
+    scanf("%f", &sideLength);
+    circleRadius = sideLength / 2.0;
+    circleArea = M_PI * circleRadius * circleRadius;
+    printf("The area of the circle that fits within the square is: %.2f\n", circleArea);
+    return 0;
+}
+
+
+p49
+#include<stdio.h>
+int main()
+{
+char ch[50];
+printf("Enter the oraganisation name:");
+scanf("%s",&ch);
+printf("welcome to %s",ch);
+}
+
+
+p50
+#include <stdio.h>
+
+int main() {
+    float length, breadth, perimeter, area;
+    printf("Enter the length of the rectangle: ");
+    scanf("%f", &length);
+    printf("Enter the breadth of the rectangle: ");
+    scanf("%f", &breadth);
+    perimeter = 2 * (length + breadth);
+    area = length * breadth;
+    printf("Perimeter of the rectangle: %.2f\n", perimeter);
+    printf("Area of the rectangle: %.2f\n", area);
+
+    return 0;
+}
+
+
+p51
+#include <stdio.h>
+int main() {
+    float sideLength, surfaceArea, volume;
+    printf("Enter the side length of the cube: ");
+    scanf("%f", &sideLength);
+    surfaceArea = 6 * sideLength * sideLength;
+    volume = sideLength * sideLength * sideLength;
+    printf("Surface area of the cube: %.2f\n", surfaceArea);
+    printf("Volume of the cube: %.2f\n", volume);
+
+    return 0;
+}
+
+
+p52
+#include <stdio.h>
+int main() {
+    int num, absoluteValue;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    if (num < 0) {
+        absoluteValue = -num;
+    } else {
+        absoluteValue = num;
+    }
+    printf("The absolute value of %d is %d\n", num, absoluteValue);
+    return 0;
+}
+
+
+p53
+#include <stdio.h>
+int main() {
+    int a, b, c, max;
+    printf("Enter three integers: ");
+    scanf("%d %d %d", &a, &b, &c);
+    max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+    printf("The largest number among %d, %d, and %d is %d\n", a, b, c, max);
+    return 0;
+}
+
