@@ -39,7 +39,7 @@ printf("%d",ch);
 return 0;
 }
 
-p24
+p24 & p25
 #include<stdio.h>
 int main()
 {
@@ -50,7 +50,7 @@ return 0;
 }
 
 
-p25
+p26
 #include<stdio.h>
 int main()
 {
