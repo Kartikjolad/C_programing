@@ -1,0 +1,244 @@
+p88
+  #include<stdio.h>
+int square_num(int a);
+int main()
+{
+    int num,res;
+    printf("Enter any number:");
+    scanf("%d",&num);
+    res=square_num(num);
+    printf("square of %d is %d",num,res);
+}
+int square_num(int a)
+{
+    return a*a;
+}
+
+
+p89
+  #include<stdio.h>
+float product(int a,float b);
+int main()
+{
+    int num;
+    float val,res;
+    printf("Enter the two numbers:");
+    scanf("%d %f",&num,&val);
+    res=product(num,val);
+    printf("result=%0.2f",res);
+}
+float product(int a,float b)
+{
+    return a*b;
+}
+
+
+p90
+  #include<stdio.h>
+int math(int num1,int num2);
+int main()
+{
+    int a,b,result;
+    printf("Enter two numbers:");
+    scanf("%d\n%d",&a,&b);
+    result=math(a,b);
+    printf("%d",result);
+}
+int math(int num1,int num2)
+{
+    char operation;
+    printf("Enter the operation:");
+    scanf("%c",&operation);
+
+    switch(operation)
+    {
+    case '+':
+        return num1 + num2;
+        break;
+
+    case '-':
+        return num1 - num2;
+        break;
+
+    case '*':
+        return num1 * num2;
+        break;
+
+    case '/':
+        return num1 / num2;
+        break;
+
+    default:
+        printf("Error");
+    }'
+}
+
+
+p91
+  #include<stdio.h>
+char fun_name(char n[50]);
+int main()
+{
+char name[50];
+printf("Enter the name:");
+scanf("%s",&name);
+fun_name(name);
+}
+char fun_name(char n[50])
+{
+ printf("\"Hello\<%s\>\|\!\"",n);
+}
+
+
+p92
+  #include<stdio.h>
+#include<math.h>
+#define PI 3.14
+float sphere(float r);
+int main()
+{
+    float rad,volume;
+    printf("Enter the radius:");
+    scanf("%f",&rad);
+    volume=sphere(rad);
+    printf("%0.2f",volume);
+    return 0;
+}
+float sphere(float r)
+{
+    return ((4.0/3.0)* PI * (r*r*r));
+}
+
+
+p93
+  #include<stdio.h>
+int fact_no(int a);
+int main()
+{
+    int num,fact;
+    printf("Enter the number:");
+    scanf("%d",&num);
+    fact=fact_no(num);
+    printf("factorial of %d is %d",num,fact);
+}
+int fact_no(int a)
+{
+    if(a>1)
+        a=a*fact_no(a-1);
+    return a;
+}
+
+
+p96
+  #include<stdio.h>
+void no_arg_no_re(void);
+int main()
+{
+    int num1;
+    printf("Enter the first number:");
+    scanf("%d",&num1);
+    no_arg_no_re();
+    printf("Number in main function=%d",num1);
+}
+void no_arg_no_re(void)
+{
+    int num2;
+    printf("Enter the second number:");
+    scanf("%d",&num2);
+    printf("Number in no_arg_no_re function is %d\n",num2);
+}
+
+
+p97
+  #include<stdio.h>
+void arg_no_re(int a);
+int main()
+{
+    int num1;
+    printf("Enter the first number:");
+    scanf("%d",&num1);
+    arg_no_re(num1);
+}
+void arg_no_re(int a)
+{
+    printf("argument with no return value function is %d\n",a);
+}
+
+
+p98
+  #include<stdio.h>
+int no_arg_re(void);
+int main()
+{
+    int number;
+    number=no_arg_re();
+    printf("returned number=%d",number);
+}
+int no_arg_re(void)
+{
+    int num2;
+    printf("Enter the second number:");
+    scanf("%d",&num2);
+    return num2;
+}
+
+
+p99
+  #include<stdio.h>
+void an_fun(void);
+int num=7;
+int main()
+{
+    int num=5;
+    an_fun();
+    printf("number in main function is %d",num);
+
+}
+void an_fun()
+{
+    printf("number in an_fun function is %d\n",num);
+}
+
+
+p100
+  #include<stdio.h>
+//void normal_fun(void);
+int e;
+float f;
+char g;
+double h;
+int main()
+{
+int a;
+float b;
+char c;
+double d;
+printf("%d\n%f\n%c\n%lf\nsep\n",a,b,c,d);
+printf("%d\n%f\n%c\n%lf",e,f,g,h);
+//normal_fun();
+}
+//void normal_fun(void)
+//{
+//  printf("%d\n%f\n%c\n%lf",e,f,g,h);
+//}
+
+
+p101
+  #include<stdio.h>
+int normal_fun(void);
+int main()
+{
+    int num;
+    num=normal_fun();
+    //printf("%d",num);
+
+}
+int normal_fun(void)
+{
+    int a;
+    float b;
+    char c;
+    double d;
+    printf("%d\t%lf\t%c\t%lf\n",a,b,c,d);
+    return b;
+}
