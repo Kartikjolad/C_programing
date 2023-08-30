@@ -219,4 +219,18 @@ int main()
 }
 
 
+p86    
+#include<stdio.h>
+int main() 
+{
+    int num,st,clr, tgl;
+    printf("Enter the number:");
+    scanf("%d",&num);
+    st=num|(1<<2);
+    tgl=num^(1<<2);
+    clr=num&~(1<<3);
+    printf("st=%d\ntgl=%d\nclr=%d",st,tgl,clr);
+}
+
+
 
