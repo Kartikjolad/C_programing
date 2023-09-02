@@ -1,0 +1,54 @@
+p103
+#include<stdio.h>
+int main()
+{
+    int num,numb[100],count=0;
+    printf("Enter the number:");
+    scanf("%d",&num);
+    printf("Enter the %d numbers",num);
+    for(int i=0;i<num;i++)
+    {
+        scanf("%d",&numb[i]);
+        for(int j=0;j<i;j++)
+        {
+            if(numb[i]==numb[j])
+            {
+                count++;
+            }
+        }
+    }
+    printf("%d duplicate numbers",count);
+}
+
+
+
+p104
+#include<stdio.h>
+int main()
+{
+    int num,numb[100],temp;
+    printf("Enter the number:");
+    scanf("%d",&num);
+    printf("Enter the %d numbers\n",num);
+    for(int i=0; i<num; i++)
+    {
+        scanf("%d",&numb[i]);
+        for(int j=0; j<i; j++)
+        {
+            if(numb[i]>numb[j])
+            {
+             temp=numb[i];
+             numb[i]=numb[j];
+             numb[j]=temp;
+            }
+
+        }
+
+
+    }
+//    for(int k=0;k<num;k++)
+//        printf("%d\n",numb[k]);
+    printf("2nd biggest number=%d",numb[1]);
+
+
+}
