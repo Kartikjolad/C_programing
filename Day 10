@@ -314,10 +314,6 @@ int main()
 
     small_fu(arr,num);
 }
-
-
-
-
 void small_fu(int *numb,int size)
 {
     int i,j,temp=0;
@@ -341,6 +337,32 @@ void small_fu(int *numb,int size)
     }
 }
 
+p141
+#include<stdio.h>
+sum_avg_fu(int arr[],int size);
+int main()
+{
+    int num;
+    printf("Enter the size of array:");
+    scanf("%d",&num);
+    int arr[num];
+    printf("Enetr the %d numbers:\n",num);
+    for(int i=0; i<num; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    sum_avg_fu(arr,num);
+}
+sum_avg_fu(int arr[],int size)
+{
+    float sum=0,avg;
+    for(int i=0; i<size; i++)
+    {
+        sum+=arr[i];
+    }
+    avg=sum/size;
+    printf("average=%0.2f",avg);
+}
 
 
 
