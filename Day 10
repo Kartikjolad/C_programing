@@ -337,6 +337,8 @@ void small_fu(int *numb,int size)
     }
 }
 
+
+
 p141
 #include<stdio.h>
 sum_avg_fu(int arr[],int size);
