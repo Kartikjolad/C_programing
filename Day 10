@@ -293,3 +293,54 @@ void string_len(char *name,int len)
 }
 
 
+p140
+#include<stdio.h>
+void small_fu(int *numb,int size);
+int main()
+{
+    int num,arr[100];
+    printf("Enter the size:");
+    scanf("%d",&num);
+    printf("Enter the %d numbers\n",num);
+    for(int i=0; i<num; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0; i<num; i++)
+    {
+        printf("%d\t",arr[i]);
+    }
+    printf("\n");
+
+    small_fu(arr,num);
+}
+
+
+
+
+void small_fu(int *numb,int size)
+{
+    int i,j,temp=0;
+    for(i=0; i<size; i++)
+    {
+        for(j=1; j<size; j++)
+        {
+            if(*(numb+i)>*(numb+j))
+            {
+                temp=*(numb+i);
+                *(numb+i)=*(numb+j);
+                *(numb+j)=temp;
+            }
+        }
+    }
+
+    for(int k=1; k<size; k++)
+    {
+        printf("smallest number=%d",*numb);
+        break;
+    }
+}
+
+
+
+
