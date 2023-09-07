@@ -1,0 +1,295 @@
+p128
+#include<stdio.h>
+int main()
+{
+    int num=7;
+    int *ptr;
+    ptr=&num;
+    printf("Entered number is %d",*ptr);
+}
+
+
+p129
+#include<stdio.h>
+int main()
+{
+    int num1=4,num2=5;
+    int *ptr1,*ptr2,res;
+    ptr1=&num1;
+    ptr2=&num2;
+    res=*ptr1 + *ptr2;
+    printf("result=%d\n",res);
+}
+
+
+p130
+#include<stdio.h>
+int call_fu(int ptr1,int ptr2);
+int main()
+{
+    int num1=4,num2=5;
+    int *ptr1,*ptr2,res;
+    ptr1=&num1;
+    ptr2=&num2;
+    call_fu(ptr1,ptr2);
+}
+int call_fu(int *p,int *q)
+{
+    int res;
+    res=*p + *q;
+    printf("result=%d\n",res);
+}
+
+p131
+#include<stdio.h>
+void call_fu(int *p,int *q);
+int main()
+{
+    int num1=4,num2=5;
+    int *ptr1,*ptr2;
+    ptr1=&num1;
+    ptr2=&num2;
+    call_fu(ptr1,ptr2);
+}
+void call_fu(int *p,int *q)
+{
+    if(*p>*q)
+    {
+        printf("%d is the largest number",*p);
+    }
+    else
+        printf("%d is the largest number",*q);
+
+}
+
+
+p132
+#include<stdio.h>
+void ptr_fu(int *ptr,int n);
+int main()
+{
+int arr[50],num;
+printf("Enter the size of array:\n");
+scanf("%d",&num);
+printf("Enter the %d number\n",num);
+for(int i=0;i<num;i++)
+{
+    scanf("%d",&arr[i]);
+}
+ptr_fu(arr,num);
+}
+void ptr_fu(int *ptr,int n)
+{printf("printing elements using pointer:\n");
+    for(int i=0;i<n;i++)
+    {
+      printf("%d",*ptr+i);
+    }
+}
+
+
+p133
+#include<stdio.h>
+void len_ptr_fu(char *ptr);
+int main()
+{
+    char arr[50];
+    printf("Enter the string:\n");
+    scanf("%s",arr);
+    //printf("%s",arr);
+    len_ptr_fu(arr);
+}
+void len_ptr_fu(char *ptr)
+{
+    int len=0;
+    for(int i=0; *(ptr+i)!='\0'; i++)
+    {
+        len++;
+    }
+    printf("%d",len);
+}
+
+
+p134
+#include<stdio.h>
+int call_fu(int *p,int *q);
+int main()
+{
+    int num1=4,num2=5;
+    printf("num1=%d\nnum2=%d\n",num1,num2);
+    int *ptr1,*ptr2,res;
+    ptr1=&num1;
+    ptr2=&num2;
+    call_fu(ptr1,ptr2);
+}
+int call_fu(int *p,int *q)
+{
+int *temp;
+temp=*p;
+*p=*q;
+q=&temp;
+printf("num1=%d\nnum2=%d",*p,*q);
+}
+
+
+p135
+#include<stdio.h>
+int fac_fu(int nu,int *res);
+int main()
+{
+    int num,factorial;
+    printf("Enter the number:\n");
+    scanf("%d",&num);
+    fac_fu(num,&factorial);
+    return 0;
+}
+int fac_fu(int nu,int *res)
+{
+    *res=1;
+    for(int i=1; i<=nu; i++)
+    {
+        *res=(*res)*i;
+    }
+    printf("factorial is %d",*res);
+}
+
+
+p136
+#include<stdio.h>
+void sort_fu(int *ptr,int size);
+int main()
+{
+    int arr[50],size,i;
+    printf("Enter the size of an array:\n");
+    scanf("%d",&size);
+    printf("Enter the %d numbers\n",size);
+    for(i=0; i<size; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("array is:\n");
+    for(i=0; i<size; i++)
+    {
+        printf("%d\t",arr[i]);
+    }
+    printf("\n");
+    sort_fu(arr,size);
+}
+
+void sort_fu(int *ptr,int size)
+{
+    int i,j,temp=0;
+    for(i=0; i<size; i++)
+    {
+        for(j=0; j<size; j++)
+        {
+            if(*(ptr+i)>*(ptr+j))
+            {
+                temp=*(ptr+i);
+                *(ptr+i)=*(ptr+j);
+                *(ptr+j)=temp;
+            }
+        }
+    }
+    printf("pointer value printing\n");
+    for(i=0; i<size; i++)
+    {
+        printf("%d\t",*(ptr+i));
+    }
+}
+
+
+
+p137
+#include<stdio.h>
+void sum_fu(int *ptr,int size);
+int main()
+{
+    int arr[50],size,i;
+    printf("Enter the size of an array:\n");
+    scanf("%d",&size);
+    printf("Enter the %d numbers\n",size);
+    for(i=0; i<size; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("array is:\n");
+    for(i=0; i<size; i++)
+    {
+        printf("%d\t",arr[i]);
+    }
+    printf("\n");
+    sum_fu(arr,size);
+}
+
+void sum_fu(int *ptr,int size)
+{
+
+    int i,j,sum=0;
+    for(i=0; i<size; i++)
+    {
+        sum+=*(ptr+i);
+    }
+    printf("sum of array elements is:");
+    printf("%d",sum);
+}
+
+p138
+#include<stdio.h>
+void sum_fu(int *ptr,int size);
+int main()
+{
+    int arr[50],size,i;
+    printf("Enter the size of an array:\n");
+    scanf("%d",&size);
+    printf("Enter the %d numbers\n",size);
+    for(i=0; i<size; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("array is:\n");
+    for(i=0; i<size; i++)
+    {
+        printf("%d\t",arr[i]);
+    }
+    printf("\n");
+    sum_fu(arr,size);
+}
+
+void sum_fu(int *ptr,int size)
+{
+    int i,j;
+    printf("array in reverse order:\n");
+    for(i=size-1; i>=0; i--)
+    {
+        printf("%d\t",*(ptr+i));
+    }
+}
+
+
+p139
+#include<stdio.h>
+#include<string.h>
+void string_len(char *name,int len);
+int main()
+{
+    char name[50];
+    int len=0;
+    printf("Enter the character : ");
+    scanf("%s",name);
+    while(name[len]!='\0')
+    {
+        len++;
+    }
+    string_len(name,len);
+}
+void string_len(char *name,int len)
+{
+    printf("Reversed string is ");
+    for(int i=len-1;i>=0;i--)
+    {
+        printf("%c",*(name+i));
+    }
+
+}
+
+
