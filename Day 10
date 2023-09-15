@@ -123,10 +123,10 @@ int main()
 }
 int call_fu(int *p,int *q)
 {
-int *temp;
+int temp;
 temp=*p;
 *p=*q;
-q=&temp;
+*q=temp;
 printf("num1=%d\nnum2=%d",*p,*q);
 }
 
