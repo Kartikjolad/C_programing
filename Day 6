@@ -31,13 +31,13 @@ else
 
 
 p75
-#include<stdio.h>
+include<stdio.h>
 int main()
 {
-    int num,i,j,r;
+    int num,i,j,r,count=0;;
     printf("Enter the number:");
     scanf("%d",&num);
-    for(i=1; i<=num; i++)
+    for(i=1; count<num; i++)
     {
         r=0;
         for(j=2; j<=i/2; j++)
@@ -47,13 +47,90 @@ int main()
                 r++;
                 break;
             }
-
         }
         if(r==0 && i!=0)
-            printf("%d\n",i);
+        {
+          printf("%d\n",i);
+          count++;
+        }
+    }
+}
+
+
+
+p76
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int len;
+    char str[50];
+    printf("Enter the string:\n");
+    scanf("%s",str);
+    len=strlen(str)-1;
+    printf("%c",str[len]);
+
+}
+
+
+
+p77
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char str[]="good morning";
+    int k=0,l=0,m=0,len=0;
+    len=strlen(str);
+    printf("length=%d\n",len);
+    for(int i=0;i<len; i++)
+    {
+        if((str[i]=='a')|| (str[i]=='e')||(str[i]=='i')||(str[i]=='o')||(str[i]=='u'))
+        {
+            k++;
+        }
+        else
+        {
+            if(str[i]==' ')
+            {
+                l++;
+            }
+            else
+                m++;
+        }
 
     }
+    printf("spaces=%d\n",l);
+    printf("vowels=%d\n",k);
+    printf("consonants=%d\n",m);
+}
 
+
+
+p78
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int len=0,i=0,j=0;
+    char str1[30],str2[30];
+    printf("Enter the string:\n");
+    scanf("%s",str1);
+    len=strlen(str1)-1;
+    strcpy(str2,str1);
+    strrev(str2);
+    printf("%s\n",str2);
+    while(i<len)
+    {
+        if(str1[i++]!=str2[j++])
+        {
+            printf("not palindrome!!!");
+            return 0;
+        }
+    }
+    printf("palindrome!!!");
+    return 0;
 }
 
 
@@ -159,6 +236,30 @@ int main()
     }
 }
 
+
+
+p83
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[30];
+    printf("Enter the string:\n");
+    scanf("%s",str);
+    int start=0,temp=0,end;
+    end=strlen(str)-1;
+    while(start<end)
+    {
+        if(str[start++]!=str[end--])
+        {
+            printf("Not palindrome!!!");
+            return 0;
+        }
+
+    }
+    printf("palindrome!!!");
+    return 0;
+}
 
 
 p84
