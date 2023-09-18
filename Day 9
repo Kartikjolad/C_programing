@@ -374,3 +374,81 @@ int main()
 }
 
 
+p126
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main()
+{
+    char b1[100],b2[100];
+    int res;
+    printf("Enter first binary number:\n");
+    scanf("%s",b1);
+    printf("Enter second binary number:\n");
+    scanf("%s",b2);
+
+    int n1,i=0,rem1=0,dec1=0;
+    int n2,j=0,rem2=0,dec2=0;
+    n1=atoi(b1);
+    n2=atoi(b2);
+    printf("Number1=%d\n",n1);
+    printf("Number2=%d\n",n2);
+    while(n1!=0)
+    {
+        rem1=n1%10;
+        dec1=dec1+rem1*pow(2,i);
+        n1/=10;
+        i++;
+    }
+    printf("num1=%d\n",dec1);
+
+    while(n2!=0)
+    {
+        rem2=n2%10;
+        dec2=dec2+rem2*pow(2,j);
+        n2/=10;
+        j++;
+    }
+    printf("num2=%d\n",dec2);
+
+    int dec=0,k=0,rem=0,len;
+    dec=dec1+dec2;
+    printf("%d\n",dec);
+
+    while(dec!=0)
+    {
+        rem=dec%2;
+        res+=rem*pow(10,k);
+        dec=dec/2;
+        k++;
+    }
+
+printf("%d",res);
+}
+
+
+
+p127
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int len1,i,j,k=0;
+    char str1[50],str2[50];
+    printf("Enter the string:\n");
+    gets(str1);
+    len1=strlen(str1);
+    for(i=len1; i>0; i--)
+    {
+        if(str1[i]==' ')
+        {
+            break;
+        }
+    }
+    for(j=i+1; j<len1; j++)
+    {
+        str2[k++]=str1[j];
+    }
+    printf("length of last word is %d",strlen(str2));
+}
+
