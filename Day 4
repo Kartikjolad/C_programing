@@ -195,6 +195,47 @@ printf("%d\n",a!=c);
 }
 
 
+p39
+#include<stdio.h>
+int main()
+{
+    int arr[50],size,i,j,temp;
+    printf("Enter the size of array:");
+    scanf("%d",&size);
+    printf("Enter the %d numbers:\n",size);
+    for(i=0; i<size; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("array:\n");
+    for(int i=0; i<size; i++)
+    {
+        printf("%d",arr[i]);
+    }
+    printf("\n");
+    printf("Non-repeating numbers is/are:\n");
+    for(i=0; i<size; i++)
+    {
+        temp=0;
+        for(j=0; j<size; j++)
+        {
+            if(arr[i]==arr[j])
+            {
+                temp++;
+
+            }
+        }
+        if(temp>1)
+        {
+            continue;
+        }
+        else
+        printf("%d\t",arr[i]);
+    }
+    }
+
+
+
 p40
 #include<stdio.h>
 int main()
